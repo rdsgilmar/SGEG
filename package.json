@@ -1,0 +1,18 @@
+{
+  "name": "SYSTEM-SGEG",
+  "version": "1.0.0",
+  "description": "Sistema básico para cadastro de alunos",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "author": "GRDS LTDA",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "node": "^20.13.1",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7"
+  }
+}
