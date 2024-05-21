@@ -18,7 +18,7 @@ app.use(express.static('src/public'));
 
 app.use('/', router); // Corrigido para usar 'router'
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Servidor rodando com sucesso!!!');
 });
 

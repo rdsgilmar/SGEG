@@ -1,15 +1,16 @@
 <main class="row col">
-    <form class="col-8 col-sm-8 col-lg-4 col-md-8 formLogin" action="">
-        
+    <form class="col-8 col-sm-8 col-lg-4 col-md-8 formLogin" action="/login" method="post">
+
         <div class="login">
-            <input id="email" type="email" placeholder="E-mail" class="form-control" required>
-            {{!-- <div class="input-container"> --}}
-                <input type="password" id="password" placeholder="Password" class="form-control eyeball-input" required>
-                {{!-- <i class="fa-eyeball"></i> --}}
-            {{!-- </div> --}}
-            
+            <input id="email" type="email" name="email" placeholder="E-mail" class="form-control" required>
+            <input type="password" id="password" name="senha" placeholder="Password" class="form-control"
+                required>
+
             <button type="submit">Login</button>
+            <br>
+            <br>
+            <a href="/register">Cadastre - se aqui</a>
         </div>
-        
+
     </form>
 </main>

@@ -1,4 +1,4 @@
-const authServices = require('../services/auth');
+const authServices = require('../services/authServices');
 
 const register = async (req, res) => {
     try {
@@ -15,14 +15,23 @@ const login = async (req, res) => {
     try {
         const { email, senha } = req.body;
         const token = await authServices.login(email, senha);
-        res.send({ token });
+
+        // Redirecionar para o dashboard
+        res.redirect('/dashboard');
     } catch (error) {
         console.error(error);
         res.status(401).send({ message: error.message });
     }
 };
 
+
+const renderRegisterPage = (req, res) => {
+    res.render('pages/register');
+};
+
 module.exports = {
     register,
-    login
+    login,
+    renderRegisterPage
 };
+

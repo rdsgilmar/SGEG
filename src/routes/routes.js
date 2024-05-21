@@ -9,8 +9,14 @@ router.get('/', (req, res) => {
 });
 
 // Rotas de autenticação
-router.post('/register', authController.register); // Use 'router' em vez de 'app'
-router.post('/login', authController.login); // Use 'router' em vez de 'app'
+router.get('/register', authController.renderRegisterPage);
+router.post('/register', authController.register);
+router.post('/login', authController.login); // Nova rota para login
+
+// Rota para a página de destino (dashboard)
+router.get('/dashboard', (req, res) => {
+    res.render('pages/dashboard');
+});
 
 // Exportando módulo router
 module.exports = router;
