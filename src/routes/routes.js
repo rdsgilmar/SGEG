@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const authController = require('../controllers/autth');
+const authController = require('../controllers/authController');
 
-///ROTA DE INCIALIZAÇÃO DO SISTEMA
+// Rota de inicialização do sistema
 router.get('/', (req, res) => {
-    console.log('Rota principal acessada.');
+    console.log('Rota do login acessada.');
     res.render('pages/login');
 });
 
 // Rotas de autenticação
-app.post('/register', authController.register);
-app.post('/login', authController.login);
+router.post('/register', authController.register); // Use 'router' em vez de 'app'
+router.post('/login', authController.login); // Use 'router' em vez de 'app'
 
-//////////////Exportando modulo router
+// Exportando módulo router
 module.exports = router;
