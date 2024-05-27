@@ -1,6 +1,6 @@
-
-
-.formLogin{
+.formLogin,
+.formRegister,
+.formCadastro {
     -webkit-box-shadow: 7px 2px 25px 7px rgba(211, 210, 247, 0.56);
     -moz-box-shadow: 7px 2px 25px 7px rgba(211, 210, 247, 0.56);
     box-shadow: 7px 2px 25px 7px rgba(211, 210, 247, 0.56);
@@ -22,6 +22,7 @@ form {
     animation: border-animation 1s infinite alternate;
 }
 
+
 .login {
     display: flex;
     align-items: center;
@@ -29,7 +30,8 @@ form {
 }
 
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="text"] {
     padding: 10px;
     margin: 10px;
     border: 2px solid #5A8CD6;
@@ -52,29 +54,3 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #135ecf;
 }
-
-.btnCad a {
-    font-size: 10px;
-    color: #FFF;
-    padding-top: 15px;
-}
-
-@keyframes border-animation {
-    from {
-        border-color: rgb(228, 225, 248);
-    }
-
-    to {
-        border-color: rgb(56, 56, 243);
-    }
-}
-
-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 13%;
-    padding-bottom: 10px;
-}
-
-
